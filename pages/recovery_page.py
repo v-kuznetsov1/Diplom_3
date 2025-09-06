@@ -2,7 +2,6 @@
 import allure
 from pages.base_page import BasePage
 from locators.recovery_page_locators import RecoveryPasswordLocators
-from locators.main_page_locators import MainPageLocators
 from data import TestData
 
 
@@ -14,7 +13,7 @@ class RecoveryPage(BasePage):
     
     @allure.step('Клик по кнопке "Личный аккаунт"')
     def click_personal_account_button(self):
-        return self.click_to_element(MainPageLocators.PERSONAL_ACCOUNT_BUTTON)
+        return self.click_to_element(RecoveryPasswordLocators.PERSONAL_ACCOUNT_BUTTON)
     
     
     @allure.step('Клик по кнопке "Восстановить пароль"')

@@ -1,7 +1,6 @@
 
 import allure
 from pages.base_page import BasePage
-from locators.main_page_locators import MainPageLocators
 from locators.authorization_locators import AuthorizationLocators
 
 
@@ -15,7 +14,7 @@ class AuthorizationPage(BasePage):
 
     @allure.step('Клик по кнопке "Личный кабинет"') 
     def click_personal_account_button(self):
-        return self.click_to_element(MainPageLocators.PERSONAL_ACCOUNT_BUTTON)
+        return self.click_to_element(AuthorizationLocators.PERSONAL_ACCOUNT_BUTTON)
     
     
     @allure.step('Ввод email')

@@ -1,8 +1,7 @@
 import allure
 from pages.base_page import BasePage
-from locators.main_page_locators import MainPageLocators
 from locators.order_feed_locators import OrderFeedLocators
-from locators.main_page_locators import MainPageLocators
+
 
 
 class OrderFeed(BasePage):
@@ -13,7 +12,7 @@ class OrderFeed(BasePage):
     
     @allure.step('Клик по кнопке и "Лента заказов"')
     def click_order_feed_button(self):
-        return self.click_to_element(MainPageLocators.ORDER_FEED_BUTTON)
+        return self.click_to_element(OrderFeedLocators.ORDER_FEED_BUTTON)
     
 
     @allure.step('Получение общего количества заказов')
@@ -28,7 +27,7 @@ class OrderFeed(BasePage):
     
     @allure.step('Клик по кнопке "Конструктор"')
     def click_contructor_button(self):
-        return self.click_to_element(MainPageLocators.CONSTRUCTOR_BUTTON)
+        return self.click_to_element(OrderFeedLocators.CONSTRUCTOR_BUTTON)
     
 
     @allure.step('Получение номера заказа, находящегося в работе')
@@ -63,7 +62,7 @@ class OrderFeed(BasePage):
     
     @allure.step('Переход в личный кабинет')
     def go_to_personal_account(self):
-        return self.click_to_element(MainPageLocators.PERSONAL_ACCOUNT_BUTTON)
+        return self.click_to_element(OrderFeedLocators.PERSONAL_ACCOUNT_BUTTON)
     
     @allure.step('Получение заказа из истории заказов')
     def check_order_in_orders_history(self, condition):

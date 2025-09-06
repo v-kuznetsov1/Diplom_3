@@ -1,7 +1,6 @@
 
 import allure
 from pages.base_page import BasePage
-from locators.main_page_locators import MainPageLocators
 from locators.personal_account_locators import PersonalAccointLocators
 
 
@@ -12,7 +11,7 @@ class PersonalAccountPage(BasePage):
 
     @allure.step('Переход в личный кабинет')
     def go_to_personal_account(self):
-        return self.click_to_element(MainPageLocators.PERSONAL_ACCOUNT_BUTTON)
+        return self.click_to_element(PersonalAccointLocators.PERSONAL_ACCOUNT_BUTTON)
 
     @allure.step('Переход на страницу истории заказов')
     def click_to_order_history(self):
