@@ -4,8 +4,6 @@ from selenium.webdriver.common.by import By
 
 class OrderPageLocators:
 
-    ORDER_FEED_BUTTON = [By.XPATH, '//p[text()="Лента Заказов"]']
-    CONSTRUCTOR_BUTTON = [By.XPATH, '//p[text()="Конструктор"]']
     BUN = [By.XPATH, "//img[@alt='Флюоресцентная булка R2-D3']"]
     MODAL_WINDOW = [By.CLASS_NAME, "Modal_modal__container__Wo2l_"]
     CLOSE_MODAL_WINDOW = [By.XPATH, 

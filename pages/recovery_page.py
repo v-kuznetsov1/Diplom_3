@@ -11,10 +11,6 @@ class RecoveryPage(BasePage):
         super().__init__(browser)
 
     
-    @allure.step('Клик по кнопке "Личный аккаунт"')
-    def click_personal_account_button(self):
-        return self.click_to_element(RecoveryPasswordLocators.PERSONAL_ACCOUNT_BUTTON)
-    
     
     @allure.step('Клик по кнопке "Восстановить пароль"')
     def click_to_recovery_password_button(self):

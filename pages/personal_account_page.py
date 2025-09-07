@@ -9,10 +9,7 @@ class PersonalAccountPage(BasePage):
     def __init__(self, browser):
         super().__init__(browser)
 
-    @allure.step('Переход в личный кабинет')
-    def go_to_personal_account(self):
-        return self.click_to_element(PersonalAccointLocators.PERSONAL_ACCOUNT_BUTTON)
-
+    
     @allure.step('Переход на страницу истории заказов')
     def click_to_order_history(self):
         return self.click_to_element(PersonalAccointLocators.ORDER_HISTORY_BUTTON)

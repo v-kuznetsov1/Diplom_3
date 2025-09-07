@@ -1,10 +1,8 @@
 
 import allure
 from urls import URLs
+from pages.main_page import MainPage
 from pages.order_page import OrderPage
-
-
-
 
 
 class TestOrderPage:
@@ -12,14 +10,15 @@ class TestOrderPage:
     @allure.title('Проверка перехода на "Ленту заказов" и конструктора')
     def test_check_order_feed_and_constructor(self, browser, login_user):
 
+        main_page = MainPage(browser)
         order_page = OrderPage(browser)
 
-        order_page.click_order_feed_button()
+        main_page.click_to_order_feed_button()
 
         with allure.step('Пророверка, что после клика по кнопке произошел редирект на страницу с лентой заказов'):
             assert order_page.check_current_url(URLs.ORDER_FEED_URL) == True, 'Редирект на /feed не произошел'
 
-        order_page.click_contsructor_button()
+        main_page.click_to_contructor_button()
         order_page.click_to_ingredient()
         order_page.check_modal_window()
         order_page.close_modal_window()

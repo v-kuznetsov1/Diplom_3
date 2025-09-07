@@ -4,9 +4,7 @@ from selenium.webdriver.common.by import By
 
 class OrderFeedLocators:
 
-    ORDER_FEED_BUTTON = [By.XPATH, '//p[text()="Лента Заказов"]']
-    CONSTRUCTOR_BUTTON = [By.XPATH, '//p[text()="Конструктор"]']
-    PERSONAL_ACCOUNT_BUTTON = [By.XPATH, "//p[contains(text(), 'Личный Кабинет')]"]
+
     TOTAL_ORDER = [By.XPATH, "//p[contains(@class, 'text_type_main-medium') and contains(text(), 'Выполнено за все время:')]"
     "/following-sibling::p[contains(@class, 'OrderFeed_number__2MbrQ') and contains(@class, 'text_type_digits-large')]"]
     

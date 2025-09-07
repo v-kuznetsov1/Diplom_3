@@ -9,19 +9,10 @@ class OrderPage(BasePage):
     def __init__(self, browser):
         super().__init__(browser)
 
-    @allure.step('Клик по кнопке "Лента заказов"')
-    def click_order_feed_button(self):
-        return self.click_to_element(OrderPageLocators.ORDER_FEED_BUTTON)
-    
     
     @allure.step("Проверка ожидаемого url'a")
     def check_current_url(self, url):
         return super().check_current_url(url)
-    
-
-    @allure.step('Клик по кнопке "Конструктор"')
-    def click_contsructor_button(self):
-        return self.click_to_element(OrderPageLocators.CONSTRUCTOR_BUTTON)
     
 
     @allure.step('Клик по ингредиенту')

@@ -6,6 +6,7 @@ from selenium import webdriver
 from urls import URLs
 from helpers import generate_user_data
 from pages.authorization_page import AuthorizationPage
+from pages.main_page import MainPage
 
 
 
@@ -51,7 +52,9 @@ def login_user(browser, create_and_delete_user):
     response, payload = create_and_delete_user
     email = payload['email']
     password = payload['password']
+    main_page = MainPage(browser)
     authorization = AuthorizationPage(browser)
+    main_page.click_to_personal_account_button()
     authorization.login(email, password)
 
     
